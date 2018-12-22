@@ -1,6 +1,7 @@
 # flutter_pull
 
 Can use in  any  view which support  Listener;
+You can replace the title with your self Frame Animation  or image
 
 
 ## Getting Started
