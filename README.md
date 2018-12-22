@@ -19,36 +19,19 @@ samples, guidance on mobile development, and a full API reference.
 
 How to  use:  follow  where is import 
 class _MyHomePageState extends LnpullListenerState<MyHomePage> { //1.LnpullListenerState<MyHomePage> import
-  List<String>  list= [];
-
-
+...
  @override
   void initState() {
     // TODO: implement initState
     super.initState();  /// 2super import
-    for(int i=0;i<100;i++){
-       list.add("i am $i");
-    }
+ ...
   }
   @override
   Widget build(BuildContext context) {
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
+...
       child:  getPullListener(  //3. can use in any listview
           child:ListView.separated(
-            itemCount: list.length+1,
-            separatorBuilder: (BuildContext context, int index) => Divider(
-              height: 1,
-              color: Colors.transparent,
-            ),
-            itemBuilder: (BuildContext context, int position) {
-
-              return getRow(position);
-            },
+...
             controller: scrollController,
             padding:EdgeInsets.all(0),
           )
