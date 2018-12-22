@@ -17,36 +17,21 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.io/docs), which offers tutorials, 
 samples, guidance on mobile development, and a full API reference.
 
-How to  use:  follow  where is import 
-class _MyHomePageState extends LnpullListenerState<MyHomePage> { //1.LnpullListenerState<MyHomePage> import
-...
- @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();  /// 2super import
- ...
-  }
+
+##Full can see the main.dar
+class _MyHomePageState extends LnpullListenerState<MyHomePage> { 
+
   @override
   Widget build(BuildContext context) {
 ...
       child:  getPullListener(  //3. can use in any listview
           child:ListView.separated(
-...
+...         
             controller: scrollController,
             padding:EdgeInsets.all(0),
           )
           ,startRefrensh:onRefrensh,height:40),
-    ),
     );
-  }
-
-  getRow(int position){
-   if(position==0){
-     return getRfrenshHeader();
-   }
-   else{
-     return  Text(list[position-1]); 
-   }
   }
   onRefrensh()  async{
     await   Future.delayed(const Duration(seconds: 3));
@@ -54,10 +39,6 @@ class _MyHomePageState extends LnpullListenerState<MyHomePage> { //1.LnpullListe
       finishLoading();      
     });
   }
-  @override
-  void dispose() {
-    super.dispose();
-  }
-}
+
 
 ![Image text](https://github.com/dikeboy/flutter-refrensh/blob/master/image/snap1.gif)
